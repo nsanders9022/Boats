@@ -4,9 +4,30 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+        $('.new-boat').submit(function (event) {
+            console.log("Hi this is connecting");
+            event.preventDefault();
+            $.ajax({
+                url: '@Url.Action("NewBoat")',
+                type: 'POST',
+                dataType: 'json',
+                data: $(this).serialize(),
+                success: function (result) {
+                    var resultMessage = 'Name: ' + result.name + ' Price: ' + result.price + ' Cost: ' + result.cost + " Revenue: " + result.revenue;
+                    $('#create-result').html(resultMessage);
+                }
+            });
+        });
+
+        });
+    </script>
 </head>
 <body>
     <div class="jumbotron">Boats Boats Boats!!!</div>
+    <p>Layout works</p>
     <div>
         @RenderBody()
     </div>

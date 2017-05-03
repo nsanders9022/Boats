@@ -30,7 +30,7 @@ namespace Boats
             services.AddMvc();
             services.AddEntityFramework()
                 .AddDbContext<BoatsDbContext>(options =>
-                    options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddIdentity<AssociateUser, IdentityRole>()
                 .AddEntityFrameworkStores<BoatsDbContext>()
                 .AddDefaultTokenProviders();

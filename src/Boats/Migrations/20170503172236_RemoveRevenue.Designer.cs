@@ -8,9 +8,10 @@ using Boats.Models;
 namespace Boats.Migrations
 {
     [DbContext(typeof(BoatsDbContext))]
-    partial class BoatsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170503172236_RemoveRevenue")]
+    partial class RemoveRevenue
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -79,8 +80,6 @@ namespace Boats.Migrations
                     b.Property<string>("Name");
 
                     b.Property<int>("Price");
-
-                    b.Property<int>("Revenue");
 
                     b.HasKey("BoatId");
 

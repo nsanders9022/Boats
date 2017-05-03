@@ -9,19 +9,21 @@ namespace Boats.Models
 {
     public class BoatsDbContext : IdentityDbContext<AssociateUser>
     {
-        //protected override void OnConfiguring(DbContextOptionsBuilder options)
-        //{
-        //    options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=BoatStore;integrated security=True");
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=BoatStore;integrated security=True");
+        }
         public BoatsDbContext(DbContextOptions options) : base(options)
         {
 
         }
 
-        //protected override void OnModelCreating(ModelBuilder builder)
-        //{
-        //    base.OnModelCreating(builder);
-        //}
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+
+        public DbSet<Boat> Boats { get; set; }
     }
 
 

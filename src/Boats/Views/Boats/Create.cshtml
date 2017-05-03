@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Boats.Models.Boat
+
+<h2>Add a new boat to the inventory</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+
+    @Html.LabelFor(model => model.Price)
+    @Html.EditorFor(model => model.Price)
+
+    @Html.LabelFor(model => model.Cost)
+    @Html.EditorFor(model => model.Cost)
+
+    <label>Number of boats in stock</label>
+    @Html.EditorFor(model => model.Inventory)
+
+    @Html.LabelFor(model => model.Image)
+    @Html.EditorFor(model => model.Image)
+
+    <input type="submit" value="Create" />
+}
+@Html.ActionLink("Back to List", "Index")

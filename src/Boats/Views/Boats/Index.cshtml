@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using System.Security.Claims
+
+<h2>Add a new Boat</h2>
+<form action="NewBoat" class="new-boat">
+    <label for="newName">Name: </label>
+    <input type="text" name="newName" />
+    <label for="newPrice">Price: </label>
+    <input type="number" name="newPrice" />
+    <label for="newCost">Cost: </label>
+    <input type="number" name="newCost" />
+    <label for="newInventory">Inventory: </label>
+    <input type="number" name="newInventory" />
+    <label for="newImage">Image: </label>
+    <input type="text" name="newImage" />
+    <button type="submit">Submit</button>
+</form>
+<div id="create-result"></div>
