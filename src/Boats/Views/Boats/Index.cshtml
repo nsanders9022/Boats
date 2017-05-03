@@ -1,9 +1,26 @@
-﻿@{
+﻿@model IEnumerable<Boats.Models.Boat>
+
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @using System.Security.Claims
+
+<ol>
+
+    @foreach (var listBoat in Model)
+    {
+        <li>
+            <h3>Boat Model: @Html.DisplayFor(modelBoat => listBoat.Name)</h3>
+            <h4>Price: $@Html.DisplayFor(modelBoat => listBoat.Price)</h4>
+            <h4>Cost: $@Html.DisplayFor(modelBoat => listBoat.Cost), 
+            Inventory: @Html.DisplayFor(modelBoat => listBoat.Inventory), 
+            Image Url: @Html.DisplayFor(modelBoat => listBoat.Image), 
+            Revenue from each boat: @Html.DisplayFor(modelBoat => listBoat.Revenue)</h4>
+        </li>
+    }
+</ol>
 
 <h2>Add a new Boat</h2>
 <form action="NewBoat" class="new-boat">
