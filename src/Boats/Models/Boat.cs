@@ -18,6 +18,7 @@ namespace Boats.Models
         public int Inventory { get; set; }
         public string Image { get; set; }
         public int Revenue { get; set; }
+        public List<AssociateBoat> AssociatesBoats { get; set; }
 
         public Boat(string name, int price, int cost, int inventory, string image, int boatId = 0)
         {

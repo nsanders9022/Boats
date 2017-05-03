@@ -215,7 +215,10 @@ C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503172236_RemoveRevenu
 C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503172236_RemoveRevenue.Designer.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503175443_AddRevenue.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503175443_AddRevenue.Designer.cs
+C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503184119_JoinTable.cs
+C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503184119_JoinTable.Designer.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\BoatsDbContextModelSnapshot.cs
+C:\Users\epicodus\Desktop\Boats\src\Boats\Models\AssociateBoat.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Models\AssociateUser.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Models\Boat.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Models\BoatsDbContext.cs
