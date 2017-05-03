@@ -219,6 +219,12 @@ C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503184119_JoinTable.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503184119_JoinTable.Designer.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503230742_ChangeJoinTableName.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503230742_ChangeJoinTableName.Designer.cs
+C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503232529_ChangePropertiesInController.cs
+C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503232529_ChangePropertiesInController.Designer.cs
+C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503233030_ChangePropertiesInControllers.cs
+C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503233030_ChangePropertiesInControllers.Designer.cs
+C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503233232_TryToFixIssue.cs
+C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\20170503233232_TryToFixIssue.Designer.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Migrations\BoatsDbContextModelSnapshot.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Models\AssociateUser.cs
 C:\Users\epicodus\Desktop\Boats\src\Boats\Models\Boat.cs

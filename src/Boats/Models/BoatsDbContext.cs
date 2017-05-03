@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace Boats.Models
 {
@@ -18,13 +19,26 @@ namespace Boats.Models
 
         }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
+            modelBuilder.Entity<Sale>()
+               .HasKey(t => new { t.AssociateBoatId });
+
+            modelBuilder.Entity<Sale>()
+                .HasOne(pt => pt.Boat)
+                .WithMany(p => p.Sales)
+                .HasForeignKey(pt => pt.BoatId);
+
+            modelBuilder.Entity<Sale>()
+               .HasOne(pt => pt.AssociateUser)
+               .WithMany(p => p.Sales)
+               .HasForeignKey(pt => pt.AssociateId);
+            base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Boat> Boats { get; set; }
         public DbSet<Sale> Sales { get; set; }
+      
 
     }
 

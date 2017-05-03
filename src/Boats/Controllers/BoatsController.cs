@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Boats.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Boats.Controllers
 {
@@ -35,5 +37,16 @@ namespace Boats.Controllers
             _db.SaveChanges();
             return Json(newBoat);
         }
+
+        [HttpPost]
+        public IActionResult SellBoat(int newBoatId, string AssociateId, string newComment)
+        {
+            int newCommission = 12;
+            Sale newSale = new Sale(newBoatId, AssociateId, newComment, newCommission);
+            _db.Sales.Add(newSale);
+            _db.SaveChanges();
+            return Json(newSale);
+        }
     }
 }
+ 

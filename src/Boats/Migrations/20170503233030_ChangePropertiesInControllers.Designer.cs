@@ -8,9 +8,10 @@ using Boats.Models;
 namespace Boats.Migrations
 {
     [DbContext(typeof(BoatsDbContext))]
-    partial class BoatsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170503233030_ChangePropertiesInControllers")]
+    partial class ChangePropertiesInControllers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.0-rtm-21431")
@@ -89,7 +90,7 @@ namespace Boats.Migrations
 
             modelBuilder.Entity("Boats.Models.Sale", b =>
                 {
-                    b.Property<int>("SoldId")
+                    b.Property<int>("SaleId")
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("AssociateId");
@@ -100,7 +101,7 @@ namespace Boats.Migrations
 
                     b.Property<int>("Commission");
 
-                    b.HasKey("SoldId");
+                    b.HasKey("SaleId");
 
                     b.HasIndex("AssociateId");
 

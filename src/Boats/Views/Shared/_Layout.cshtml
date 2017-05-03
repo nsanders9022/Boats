@@ -21,6 +21,20 @@
                 }
             });
         });
+            $('.sell-boat').submit(function (event) {
+                console.log("Hi this is connecting");
+                event.preventDefault();
+                $.ajax({
+                    url: '@Url.Action("SellBoat")',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        var resultMessage = 'Associate Name: ' + result.AssociateId + ' Commission: ' + result.Commission + ' Boat Name: ' + result.BoatId;
+                        $('#sell-result').html(resultMessage);
+                    }
+                });
+            });
 
         });
     </script>
