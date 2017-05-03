@@ -16,16 +16,16 @@ namespace Boats.Models
         public int BoatId { get; set; }
         public Boat Boat { get; set; }
 
-        //public string AssociateId { get; set; }
+        public string AssociateId { get; set; }
         public AssociateUser AssociateUser { get; set; }
 
         public string Comment { get; set; }
         public int Commission { get; set; }
 
-        public Sale(int boatId, AssociateUser associateUser, string comment, int commission = 0, int id = 0)
+        public Sale(int boatId, string associateId, string comment, int commission = 0, int id = 0)
         {
             BoatId = boatId;
-            AssociateUser = associateUser;
+            AssociateId = associateId;
             Comment = comment;
             Commission = commission;
             SaleId = id;
