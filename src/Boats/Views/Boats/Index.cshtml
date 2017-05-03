@@ -14,10 +14,12 @@
         <li>
             <h3>Boat Model: @Html.DisplayFor(modelBoat => listBoat.Name)</h3>
             <h4>Price: $@Html.DisplayFor(modelBoat => listBoat.Price)</h4>
-            <h4>Cost: $@Html.DisplayFor(modelBoat => listBoat.Cost), 
-            Inventory: @Html.DisplayFor(modelBoat => listBoat.Inventory), 
-            Image Url: @Html.DisplayFor(modelBoat => listBoat.Image), 
-            Revenue from each boat: @Html.DisplayFor(modelBoat => listBoat.Revenue)</h4>
+            <h4>
+                Cost: $@Html.DisplayFor(modelBoat => listBoat.Cost),
+                Inventory: @Html.DisplayFor(modelBoat => listBoat.Inventory),
+                Image Url: @Html.DisplayFor(modelBoat => listBoat.Image),
+                Revenue from each boat: @Html.DisplayFor(modelBoat => listBoat.Revenue)
+            </h4>
         </li>
     }
 </ol>
@@ -37,3 +39,23 @@
     <button type="submit">Submit</button>
 </form>
 <div id="create-result"></div>
+
+
+
+@*<h2>Sell a boat!</h2>
+<form action="SellBoat" class="sell-boat">
+    <label for="newBoatId">Boat: </label>
+    <select class="form-control" id="boat">
+        @foreach (var listBoat in Model)
+        {
+            <option>@listBoat.Name</option>
+
+        }
+    </select>
+    <label for="newComment">Comment: </label>
+    <input type="text" name="newComment" />
+
+    <input name="newAssociateId" type="hidden" value="@User.Identity.Name">
+    <button type="submit">Sell!</button>
+</form>
+<div id="sell-result"></div>*@

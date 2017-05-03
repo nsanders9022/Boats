@@ -7,8 +7,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Boats.Models
 {
-    [Table("AssociatesBoats")]
-    public class AssociateBoat
+    [Table("Sales")]
+    public class Sale
     {
         [Key]
         public int AssociateBoatId { get; set; }
@@ -19,7 +19,7 @@ namespace Boats.Models
         public string Comment { get; set; }
         public int Commission { get; set; }
 
-        public AssociateBoat(int boatId, int associateId, string comment, int commission, int id)
+        public Sale(int boatId, int associateId, string comment, int commission, int id)
         {
             BoatId = boatId;
             AssociateId = associateId;
@@ -27,6 +27,6 @@ namespace Boats.Models
             Commission = commission;
             AssociateBoatId = id;
         }
-        public AssociateBoat() { }
+        public Sale() { }
     }
 }

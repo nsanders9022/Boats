@@ -8,6 +8,6 @@ namespace Boats.Models
 {
     public class AssociateUser : IdentityUser
     {
-        public List<AssociateBoat> AssociatesBoats { get; set; }
+        public List<Sale> Sales { get; set; }
     }
 }

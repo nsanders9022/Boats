@@ -25,18 +25,6 @@ namespace Boats.Controllers
             return View(_db.Boats.ToList());
         }
 
-        //public IActionResult Create()
-        //{
-        //    return View();
-        //}
-        //[HttpPost]
-        //public IActionResult Create(Boat boat)
-        //{
-        //    _db.Boats.Add(boat);
-        //    _db.SaveChanges();
-        //    return RedirectToAction("Index");
-        //}
-
         [HttpPost]
         public IActionResult NewBoat(string newName, int newPrice, int newCost, int newInventory, string newImage)
         {

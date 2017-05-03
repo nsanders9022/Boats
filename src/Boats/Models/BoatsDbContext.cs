@@ -24,7 +24,7 @@ namespace Boats.Models
         }
 
         public DbSet<Boat> Boats { get; set; }
-        public DbSet<AssociateBoat> AssociatesBoats { get; set; }
+        public DbSet<Sale> Sales { get; set; }
 
     }
 

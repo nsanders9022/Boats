@@ -24,7 +24,6 @@ namespace Boats.Controllers
             _db = db;
         }
 
-        // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
