@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authorization;
 using Boats.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Boats.Controllers
 {
@@ -22,6 +23,7 @@ namespace Boats.Controllers
         }
         public IActionResult Index()
         {
+            ViewBag.AssociateId = new SelectList(_db.Users, "UserId", "UserName");
             return View(_db.Boats.ToList());
         }
 
@@ -46,6 +48,16 @@ namespace Boats.Controllers
             _db.Boats.Add(newBoat);
             _db.SaveChanges();
             return Json(newBoat);
+        }
+
+        [HttpPost]
+        public IActionResult SellBoat(int newBoatId, AssociateUser newAssociateUser, string newComment )
+        {
+            int newCommission = 12;
+            Sale newSale = new Sale(newBoatId, newAssociateUser, newComment, newCommission);
+            _db.Sales.Add(newSale);
+            _db.SaveChanges();
+            return Json(newSale);
         }
     }
 }
