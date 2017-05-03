@@ -50,3 +50,5 @@ Classes
 	* name
 	* commission
 	
+
+DO TESTS!!!!!!!!!!!!!!!!!!!!!!!!!!!
