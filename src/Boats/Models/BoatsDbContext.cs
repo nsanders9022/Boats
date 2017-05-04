@@ -30,15 +30,16 @@ namespace Boats.Models
                 .HasForeignKey(pt => pt.BoatId);
 
             modelBuilder.Entity<Sale>()
-               .HasOne(pt => pt.User)
+               .HasOne(pt => pt.Seller)
                .WithMany(p => p.Sales)
-               .HasForeignKey(pt => pt.UserId);
+               .HasForeignKey(pt => pt.SellerId);
             base.OnModelCreating(modelBuilder);
         }
 
         public DbSet<Boat> Boats { get; set; }
         public DbSet<Sale> Sales { get; set; }
-      
+        public DbSet<Seller> Sellers { get; set; }
+
 
     }
 

@@ -14,15 +14,15 @@ namespace Boats.Models
         public int SaleId { get; set; }
         public int BoatId { get; set; }
         public Boat Boat { get; set; }
-        public string UserId { get; set; }
-        public User User { get; set; }
+        public int SellerId { get; set; }
+        public Seller Seller { get; set; }
         public string Comment { get; set; }
         public int Commission { get; set; }
 
-        public Sale(int boatId, string userId, string comment, int commission)
+        public Sale(int boatId, int sellerId, string comment, int commission)
         {
             BoatId = boatId;
-            UserId = userId;
+            SellerId = sellerId;
             Comment = comment;
             Commission = commission;
 

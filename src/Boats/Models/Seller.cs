@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace Boats.Models
 {
-    [Table("Users")]
-    public class User
+    [Table("Sellers")]
+    public class Seller
     {
         [Key]
-        public int UserId { get; set; }
+        public int SellerId { get; set; }
         public string Name { get; set; }
         public List<Sale> Sales { get; set; }
-        public User(string name, int userId = 0)
+        public Seller(string name, int sellerId = 0)
         {
             Name = name;
-            UserId = userId;
+            SellerId = sellerId;
         }
-        public User() { }
+        public Seller() { }
     }
 }

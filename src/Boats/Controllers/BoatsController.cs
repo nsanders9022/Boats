@@ -39,10 +39,10 @@ namespace Boats.Controllers
         }
 
         [HttpPost]
-        public IActionResult SellBoat(int newBoatId, string AssociateId, string newComment)
+        public IActionResult SellBoat(int newBoatId, int newSellerId, string newComment)
         {
             int newCommission = 12;
-            Sale newSale = new Sale(newBoatId, AssociateId, newComment, newCommission);
+            Sale newSale = new Sale(newBoatId, newSellerId, newComment, newCommission);
             _db.Sales.Add(newSale);
             _db.SaveChanges();
             return Json(newSale);
