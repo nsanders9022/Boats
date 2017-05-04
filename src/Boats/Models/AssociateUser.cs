@@ -8,6 +8,5 @@ namespace Boats.Models
 {
     public class AssociateUser : IdentityUser
     {
-        public List<Sale> Sales { get; set; }
     }
 }

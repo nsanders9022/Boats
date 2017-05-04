@@ -22,7 +22,7 @@ namespace Boats.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Sale>()
-               .HasKey(t => new { t.AssociateBoatId });
+               .HasKey(t => new { t.SaleId });
 
             modelBuilder.Entity<Sale>()
                 .HasOne(pt => pt.Boat)
@@ -30,9 +30,9 @@ namespace Boats.Models
                 .HasForeignKey(pt => pt.BoatId);
 
             modelBuilder.Entity<Sale>()
-               .HasOne(pt => pt.AssociateUser)
+               .HasOne(pt => pt.User)
                .WithMany(p => p.Sales)
-               .HasForeignKey(pt => pt.AssociateId);
+               .HasForeignKey(pt => pt.UserId);
             base.OnModelCreating(modelBuilder);
         }
 
