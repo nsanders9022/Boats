@@ -1,4 +1,13 @@
-User Stories
+# Boats
+
+#### By _**Nicole Sanders, Katy Daviscourt**_
+
+## Description
+
+
+## Specifications
+
+### User Stories
 
 * Login as a sales associate or a manager.
 
@@ -18,8 +27,7 @@ User Stories
 	* add new inventory for sale, including item cost and sale price
 	* see the total balance sheet for the entire store (revenue - costs = profit)
 
-
-Specs
+### Specs
 
 * When you go to the index page, the program has a form that will let you log in or sign up as a manager.
 * If the user does not sign in, they will have access to the sales associate pages only
@@ -38,17 +46,35 @@ Specs
 * If you are logged in, you can add new inventory for sale, with properties including name, cost and sale price.
 * If you are logged in, you can see the total balance sheet for the whole store, which will include all costs, all revenue and the total profit.
 
-Classes
-* Boats
-	* Image
-	* name
-	* price
-	* cost
-	* inventory
 
-* Sales associate
-	* name
-	* commission
-	
+## Setup/Installation Requirements
 
-DO TESTS!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+* Clone this repository
+* In the command line navigate to the same folder that the project.json file is located in
+* Run the commands:
+  * dotnet ef database update
+
+## Known Bugs
+
+There are no known bugs. Please contact us if any are discovered.
+
+## Support and contact details
+
+Contact Nicole Sanders at nsanders9022@gmail.com for any questions, comments, or concerns.
+
+## Technologies Used
+
+* C#
+* Visual Studio 2015 Update 3
+* Entity Framework 1.0.0 Preview 2
+* Identity Framework
+* .NET Core 1.0.0 Preview 2 003131
+* Microsoft SQL Server Management Studio
+* AJAX
+
+### License
+
+*This software is licensed under the MIT license*
+
+Copyright (c) 2017 **_Nicole Sanders, Katy Daviscourt_**
